@@ -1,0 +1,110 @@
+/* ==========================================================
+   base.css — variables, reset y estilos globales
+   Proyecto: Cool Studio (tienda de camisas)
+   ========================================================== */
+
+:root {
+  /* Paleta (hexadecimal) */
+  --fondo: #1b2430;
+  --superficie: #243040;
+  --superficie-clara: #f4f5f0;
+  --lima: #c3f400;
+  --lima-oscuro: #9bc400;
+  --texto: #c4c9ac;
+  --texto-claro: #ffffff;
+  --texto-oscuro: #111111;
+  --precio: #bc1313;
+  --borde: #3a475a;
+  --error: #ff6b6b;
+
+  /* Tipografía */
+  --fuente: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Espaciado y formas */
+  --espacio: 16px;
+  --radio: 10px;
+  --ancho-max: 1200px;
+}
+
+/* Reset: quita las márgenes por defecto y usa border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente);
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--lima);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--texto-claro);
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.25rem; }
+
+p { margin-bottom: 8px; }
+
+ul, ol { list-style: none; }
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 var(--espacio);
+}
+
+.seccion {
+  padding: 48px 0;
+}
+
+.seccion > .contenedor > h2 {
+  margin-bottom: 24px;
+}
+
+/* Accesibilidad: foco visible para teclado */
+:focus-visible {
+  outline: 3px solid var(--lima);
+  outline-offset: 2px;
+}
+
+/* Texto solo para lectores de pantalla */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
