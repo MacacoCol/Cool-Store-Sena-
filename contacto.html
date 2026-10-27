@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool Studio: tienda en línea de camisetas con letras urbanas.">
+  <title>Contacto | Cool Studio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <header class="sitio">
+    <div class="barra">
+      <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="arte.html">Arte</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <a href="login.html">Ingresar</a>
+        <a class="btn btn-borde" href="carrito.html">Carrito (2)</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="seccion" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <div class="rejilla-2">
+          <div>
+            <h1 id="titulo-contacto">Contáctanos</h1>
+            <p>¿Tienes dudas o quieres hablar con un asesor? Escríbenos y te respondemos en menos de 24 horas.</p>
+            <address style="margin-top: 16px; font-style: normal;">
+              <p>Teléfono: +57 300 000 0000</p>
+              <p>Correo: hola@coolstudio.example</p>
+              <p>Bogotá, Colombia</p>
+            </address>
+          </div>
+          <form class="panel" action="#" method="post">
+            <div class="campo"><label for="nombre">Nombre</label><input type="text" id="nombre" name="nombre" required></div>
+            <div class="campo"><label for="correo">Correo</label><input type="email" id="correo" name="correo" required></div>
+            <div class="campo">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto">
+                <option>Información de producto</option>
+                <option>Estado de mi pedido</option>
+                <option>Cambios y garantías</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="campo"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required></textarea></div>
+            <button class="btn" type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="sitio">
+    <div class="columnas">
+      <section>
+        <h3>Cool Studio</h3>
+        <p>Camisetas con letras urbanas y minimalistas. Diseño propio, edición limitada.</p>
+      </section>
+      <section>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="editorial.html">Outfits</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Cuenta</h3>
+        <ul>
+          <li><a href="registro.html">Crear cuenta</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="recuperar.html">Recuperar contraseña</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <address>
+          <p>Teléfono: +57 300 000 0000</p>
+          <p>Correo: hola@coolstudio.example</p>
+          <p>Bogotá, Colombia</p>
+        </address>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="derechos">&copy; 2026 Cool Studio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
