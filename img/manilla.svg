@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Accesorio manilla">
+  <rect width="300" height="300" fill="#f4f5f0"/>
+  <circle cx="150" cy="150" r="70" fill="none" stroke="#c3f400" stroke-width="22"/><circle cx="150" cy="150" r="70" fill="none" stroke="#161b22" stroke-width="6" stroke-dasharray="14 12"/>
+</svg>

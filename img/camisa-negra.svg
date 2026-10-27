@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Camiseta NOIR">
+  <rect width="300" height="300" fill="#f4f5f0"/>
+  <path d="M95 25 L135 12 Q150 45 165 45 Q180 45 195 12 L235 25 L285 80 L248 112 L228 94 L228 285 L72 285 L72 94 L52 112 L15 80 Z" fill="#161b22" stroke="#00000033" stroke-width="2"/>
+  <path d="M135 12 Q150 45 165 45 Q180 45 195 12" fill="none" stroke="#00000044" stroke-width="3"/>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
+        font-weight="900" font-size="46" letter-spacing="3" fill="#c3f400">NOIR</text>
+</svg>

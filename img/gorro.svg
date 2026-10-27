@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Accesorio gorro">
+  <rect width="300" height="300" fill="#f4f5f0"/>
+  <path d="M70 190 Q70 90 150 90 Q230 90 230 190 Z" fill="#161b22"/><rect x="62" y="186" width="176" height="22" rx="8" fill="#c3f400"/><circle cx="150" cy="82" r="10" fill="#c3f400"/>
+</svg>
