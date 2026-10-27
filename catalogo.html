@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool Studio: tienda en línea de camisetas con letras urbanas.">
+  <title>Catálogo | Cool Studio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <header class="sitio">
+    <div class="barra">
+      <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="arte.html">Arte</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <a href="login.html">Ingresar</a>
+        <a class="btn btn-borde" href="carrito.html">Carrito (2)</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="seccion" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <h1 id="titulo-catalogo">Catálogo</h1>
+        <p>Filtra por material, talla y color.</p>
+        <div class="con-filtros" style="margin-top: 24px;">
+          <aside class="filtros" aria-label="Filtros">
+            <form action="#" method="get">
+              <fieldset>
+                <legend>Material</legend>
+                <div class="campo campo-check"><input type="checkbox" id="mat-algodon" name="material" value="algodon"><label for="mat-algodon">Algodón peinado</label></div>
+                <div class="campo campo-check"><input type="checkbox" id="mat-organico" name="material" value="organico"><label for="mat-organico">Algodón orgánico</label></div>
+              </fieldset>
+              <fieldset>
+                <legend>Talla</legend>
+                <div class="campo campo-check"><input type="checkbox" id="talla-s" name="talla" value="S"><label for="talla-s">S</label></div>
+                <div class="campo campo-check"><input type="checkbox" id="talla-m" name="talla" value="M"><label for="talla-m">M</label></div>
+                <div class="campo campo-check"><input type="checkbox" id="talla-l" name="talla" value="L"><label for="talla-l">L</label></div>
+                <div class="campo campo-check"><input type="checkbox" id="talla-xl" name="talla" value="XL"><label for="talla-xl">XL</label></div>
+              </fieldset>
+              <div class="campo">
+                <label for="color">Color</label>
+                <select id="color" name="color">
+                  <option value="">Todos</option>
+                  <option value="gris">Gris</option>
+                  <option value="negro">Negro</option>
+                  <option value="lima">Lima</option>
+                  <option value="crema">Crema</option>
+                  <option value="azul">Azul</option>
+                  <option value="blanco">Blanco</option>
+                </select>
+              </div>
+              <button class="btn btn-bloque" type="submit">Aplicar filtros</button>
+            </form>
+          </aside>
+          <div class="catalogo" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
+      <article class="producto">
+        <img src="img/camisa-gris.svg" alt="Camiseta ROAD gris" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta ROAD gris</a></h3>
+        <p class="descripcion">Algodón peinado, letras negras minimalistas.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$59.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <img src="img/camisa-negra.svg" alt="Camiseta NOIR" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta NOIR</a></h3>
+        <p class="descripcion">Negra con letras lima, corte oversize.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$64.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <img src="img/camisa-lima.svg" alt="Camiseta LIMA" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta LIMA</a></h3>
+        <p class="descripcion">Color lima brillante, estampado tipográfico.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$62.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <img src="img/camisa-crema.svg" alt="Camiseta VINTAGE" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta VINTAGE</a></h3>
+        <p class="descripcion">Tono crema con letras urbanas estilo vintage.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li></ul>
+        <p class="precio">$67.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <img src="img/camisa-azul.svg" alt="Camiseta STREET" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta STREET</a></h3>
+        <p class="descripcion">Azul profundo, letras blancas de gran formato.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$64.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <img src="img/camisa-blanca.svg" alt="Camiseta BLOCK" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta BLOCK</a></h3>
+        <p class="descripcion">Blanca con letras rojas en bloque.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$59.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="sitio">
+    <div class="columnas">
+      <section>
+        <h3>Cool Studio</h3>
+        <p>Camisetas con letras urbanas y minimalistas. Diseño propio, edición limitada.</p>
+      </section>
+      <section>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="editorial.html">Outfits</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Cuenta</h3>
+        <ul>
+          <li><a href="registro.html">Crear cuenta</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="recuperar.html">Recuperar contraseña</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <address>
+          <p>Teléfono: +57 300 000 0000</p>
+          <p>Correo: hola@coolstudio.example</p>
+          <p>Bogotá, Colombia</p>
+        </address>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="derechos">&copy; 2026 Cool Studio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
