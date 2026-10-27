@@ -1,0 +1,406 @@
+/* ==========================================================
+   paginas.css — maquetación por página (Flexbox + Grid)
+   y media queries para móvil, tableta y escritorio
+   ========================================================== */
+
+/* ---------- Portada (hero) ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 32px;
+  padding: 56px 0;
+}
+
+.hero p.sobretitulo {
+  color: var(--lima);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 8px 0 16px;
+}
+
+.hero .botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.hero img {
+  border-radius: var(--radio);
+  background: var(--superficie-clara);
+}
+
+.promo {
+  background: var(--lima);
+  color: var(--texto-oscuro);
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+}
+
+/* ---------- Catálogo (Grid) ---------- */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.con-filtros {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.filtros {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 20px;
+}
+
+.filtros fieldset {
+  border: none;
+  margin-bottom: 16px;
+}
+
+.filtros legend {
+  color: var(--texto-claro);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.filtros .campo-check {
+  margin-bottom: 4px;
+}
+
+/* ---------- Detalle de producto ---------- */
+.detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.detalle .principal {
+  background: var(--superficie-clara);
+  border-radius: var(--radio);
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.miniaturas img {
+  width: 80px;
+  border-radius: 6px;
+  border: 2px solid var(--borde);
+  background: var(--superficie-clara);
+}
+
+.miniaturas img:hover {
+  border-color: var(--lima);
+}
+
+.selector-talla {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.selector-talla input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+}
+
+.selector-talla label {
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.selector-talla input:checked + label {
+  background: var(--lima);
+  border-color: var(--lima);
+  color: var(--texto-oscuro);
+}
+
+.selector-talla input:focus-visible + label {
+  outline: 3px solid var(--lima);
+  outline-offset: 2px;
+}
+
+.estrellas {
+  color: var(--lima);
+  letter-spacing: 2px;
+}
+
+.opiniones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.opinion {
+  background: var(--superficie);
+  border-radius: var(--radio);
+  padding: 16px;
+  border: 1px solid var(--borde);
+}
+
+/* ---------- Carrito (Grid de 2 columnas) ---------- */
+.carrito {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.item-carrito img {
+  width: 80px;
+  border-radius: 6px;
+  background: var(--superficie-clara);
+}
+
+.item-carrito .info {
+  flex: 1;
+}
+
+.resumen,
+.panel {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 24px;
+}
+
+.resumen dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.resumen .total {
+  border-top: 1px solid var(--borde);
+  margin-top: 8px;
+  padding-top: 12px;
+  color: var(--texto-claro);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* ---------- Tarjetas de información ---------- */
+.rejilla-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.rejilla-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 24px;
+}
+
+.tarjeta h3 {
+  margin-bottom: 8px;
+}
+
+.tarjeta img {
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: var(--superficie-clara);
+}
+
+.suscripcion {
+  background: var(--superficie);
+  border-radius: var(--radio);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.suscripcion form {
+  flex-direction: row;
+  flex: 1;
+  min-width: 260px;
+}
+
+/* ---------- Páginas centradas: registro, login, recuperar, mantenimiento ---------- */
+.centrado {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 980px;
+  width: 100%;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.auth.simple {
+  grid-template-columns: 1fr;
+  max-width: 460px;
+}
+
+.auth .formulario {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth .lateral {
+  background: var(--lima);
+  color: var(--texto-oscuro);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.auth .lateral h2 {
+  color: var(--texto-oscuro);
+  font-size: 2rem;
+}
+
+.auth .lateral img {
+  border-radius: var(--radio);
+  background: var(--superficie-clara);
+}
+
+.mantenimiento {
+  text-align: center;
+  max-width: 560px;
+}
+
+.mantenimiento h1 {
+  margin: 12px 0;
+}
+
+.mantenimiento .icono {
+  font-size: 4rem;
+}
+
+/* ---------- Sedes (Flexbox) ---------- */
+.sede {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.sede img {
+  width: 140px;
+  border-radius: var(--radio);
+  background: var(--superficie-clara);
+}
+
+/* ==========================================================
+   Responsive (media queries)
+   ========================================================== */
+
+/* Tabletas: 2 columnas */
+@media (max-width: 992px) {
+  .catalogo,
+  .rejilla-3,
+  .opiniones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .con-filtros {
+    grid-template-columns: 1fr;
+  }
+
+  footer.sitio .columnas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Móviles: 1 columna (el flex pasa a columna) */
+@media (max-width: 640px) {
+  header.sitio .barra {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header.sitio nav ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero,
+  .detalle,
+  .carrito,
+  .auth,
+  .rejilla-2,
+  .rejilla-3,
+  .catalogo,
+  .opiniones,
+  .fila-campos {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .sede {
+    flex-direction: column;
+  }
+
+  .auth .formulario,
+  .auth .lateral {
+    padding: 24px;
+  }
+
+  .suscripcion form {
+    flex-direction: column;
+  }
+
+  footer.sitio .columnas {
+    grid-template-columns: 1fr;
+  }
+}
