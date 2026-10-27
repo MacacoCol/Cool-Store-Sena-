@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool Studio: tienda en línea de camisetas con letras urbanas.">
+  <title>Inicio | Cool Studio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <header class="sitio">
+    <div class="barra">
+      <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="arte.html">Arte</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <a href="login.html">Ingresar</a>
+        <a class="btn btn-borde" href="carrito.html">Carrito (2)</a>
+      </div>
+    </div>
+  </header>
+  <p class="promo">Promoción de lanzamiento: 15% de descuento en tu primera compra</p>
+
+  <main>
+    <div class="contenedor">
+      <section class="hero" aria-labelledby="titulo-hero">
+        <div>
+          <p class="sobretitulo">Colección 2026</p>
+          <h1 id="titulo-hero">Letras que hablan por ti</h1>
+          <p>Camisetas minimalistas con tipografía urbana. Algodón de alto gramaje, cuello reforzado y ediciones limitadas.</p>
+          <div class="botones">
+            <a class="btn" href="catalogo.html">Comprar ahora</a>
+            <a class="btn btn-borde" href="lanzamientos.html">Ver lanzamientos</a>
+          </div>
+        </div>
+        <img src="img/camisa-lima.svg" alt="Camiseta lima con letras" width="300" height="300">
+      </section>
+    </div>
+
+    <section class="seccion" id="lanzamientos" aria-labelledby="titulo-lanzamientos">
+      <div class="contenedor">
+        <h2 id="titulo-lanzamientos">Lanzamientos</h2>
+        <div class="catalogo">
+      <article class="producto">
+        <span class="etiqueta">NUEVO</span>
+        <img src="img/camisa-gris.svg" alt="Camiseta ROAD gris" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta ROAD gris</a></h3>
+        <p class="descripcion">Algodón peinado, letras negras minimalistas.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$59.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <span class="etiqueta">NUEVO</span>
+        <img src="img/camisa-negra.svg" alt="Camiseta NOIR" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta NOIR</a></h3>
+        <p class="descripcion">Negra con letras lima, corte oversize.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$64.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+      <article class="producto">
+        <img src="img/camisa-lima.svg" alt="Camiseta LIMA" width="300" height="300" loading="lazy">
+        <h3><a href="producto.html">Camiseta LIMA</a></h3>
+        <p class="descripcion">Color lima brillante, estampado tipográfico.</p>
+        <ul class="tallas" aria-label="Tallas disponibles"><li>M</li><li>L</li><li>XL</li></ul>
+        <p class="precio">$62.900</p>
+        <a class="btn" href="producto.html">Comprar</a>
+      </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="informacion" aria-labelledby="titulo-info">
+      <div class="contenedor">
+        <h2 id="titulo-info">Por qué Cool Studio</h2>
+        <div class="rejilla-3">
+          <article class="tarjeta">
+            <h3>Materiales</h3>
+            <p>Algodón peinado de 220 g/m², suave y resistente al lavado.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Envíos</h3>
+            <p>Despachos a toda Colombia en 2 a 5 días hábiles.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Cuello y silueta</h3>
+            <p>Cuello reforzado, hombro caído y corte oversize.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="suscripcion" aria-labelledby="titulo-suscripcion">
+      <div class="contenedor">
+        <div class="suscripcion">
+          <div>
+            <h2 id="titulo-suscripcion">Suscríbete</h2>
+            <p>Entérate primero de nuevas colecciones.</p>
+          </div>
+          <form action="#" method="post">
+            <div class="campo">
+              <label for="correo-suscripcion" class="solo-lectores">Correo electrónico</label>
+              <input type="email" id="correo-suscripcion" name="correo" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <button class="btn" type="submit">Suscribirme</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="sitio">
+    <div class="columnas">
+      <section>
+        <h3>Cool Studio</h3>
+        <p>Camisetas con letras urbanas y minimalistas. Diseño propio, edición limitada.</p>
+      </section>
+      <section>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="editorial.html">Outfits</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Cuenta</h3>
+        <ul>
+          <li><a href="registro.html">Crear cuenta</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="recuperar.html">Recuperar contraseña</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <address>
+          <p>Teléfono: +57 300 000 0000</p>
+          <p>Correo: hola@coolstudio.example</p>
+          <p>Bogotá, Colombia</p>
+        </address>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="derechos">&copy; 2026 Cool Studio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
