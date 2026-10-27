@@ -1,0 +1,277 @@
+/* ==========================================================
+   componentes.css — piezas reutilizables
+   header, menú (flexbox), tarjeta de producto, botones,
+   formularios, pseudoclases (hover, focus) y footer
+   ========================================================== */
+
+/* ---------- Header y menú ---------- */
+header.sitio {
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 16px 24px;
+}
+
+header.sitio .barra {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--texto-claro);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--lima);
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+header.sitio nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+header.sitio nav a {
+  color: var(--texto);
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+header.sitio nav a:hover,
+header.sitio nav a[aria-current="page"] {
+  color: var(--lima);
+  border-bottom-color: var(--lima);
+  text-decoration: none;
+}
+
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  background: var(--lima);
+  color: var(--texto-oscuro);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid var(--lima);
+  border-radius: var(--radio);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--lima-oscuro);
+  border-color: var(--lima-oscuro);
+  text-decoration: none;
+}
+
+.btn-borde {
+  background: transparent;
+  color: var(--lima);
+}
+
+.btn-borde:hover {
+  background: var(--lima);
+  color: var(--texto-oscuro);
+}
+
+.btn-bloque {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- Tarjeta de producto ---------- */
+.producto {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+  border-color: var(--lima);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 6px;
+  background: var(--superficie-clara);
+}
+
+.producto h3 a {
+  color: var(--texto-claro);
+}
+
+.producto .descripcion {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.precio {
+  color: var(--lima);
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  background: var(--lima);
+  color: var(--texto-oscuro);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.tallas {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tallas li {
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+}
+
+/* ---------- Formularios ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  color: var(--texto-claro);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  background: var(--fondo);
+  color: var(--texto-claro);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--lima);
+  box-shadow: 0 0 0 3px rgba(195, 244, 0, 0.25);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7d8799;
+}
+
+.campo-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.campo-check input {
+  width: auto;
+}
+
+.campo-check label {
+  font-weight: 400;
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.divisor {
+  text-align: center;
+  color: #7d8799;
+  font-size: 0.9rem;
+}
+
+.ayuda {
+  font-size: 0.85rem;
+  color: #7d8799;
+}
+
+/* ---------- Footer ---------- */
+footer.sitio {
+  background: #121923;
+  border-top: 1px solid var(--borde);
+  padding: 40px 24px 20px;
+  margin-top: 48px;
+}
+
+footer.sitio .columnas {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+footer.sitio h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer.sitio li {
+  margin-bottom: 6px;
+}
+
+footer.sitio .derechos {
+  max-width: var(--ancho-max);
+  margin: 24px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--borde);
+  font-size: 0.85rem;
+  text-align: center;
+}
