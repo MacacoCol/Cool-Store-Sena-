@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool Studio: tienda en línea de camisetas con letras urbanas.">
+  <title>Carrito de compras | Cool Studio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <header class="sitio">
+    <div class="barra">
+      <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="arte.html">Arte</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <a href="login.html">Ingresar</a>
+        <a class="btn btn-borde" href="carrito.html">Carrito (2)</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="seccion" aria-labelledby="titulo-carrito">
+      <div class="contenedor">
+        <h1 id="titulo-carrito" style="margin-bottom: 24px;">Carrito de compras</h1>
+        <div class="carrito">
+          <div>
+            <div class="panel">
+              <h2>Artículos</h2>
+              <ul>
+                <li class="item-carrito">
+                  <img src="img/camisa-gris.svg" alt="Camiseta ROAD gris" width="80" height="80">
+                  <div class="info"><h3>Camiseta ROAD gris</h3><p class="ayuda">Talla M · Cantidad 1</p></div>
+                  <p class="precio">$59.900</p>
+                </li>
+                <li class="item-carrito">
+                  <img src="img/camisa-negra.svg" alt="Camiseta NOIR" width="80" height="80">
+                  <div class="info"><h3>Camiseta NOIR</h3><p class="ayuda">Talla L · Cantidad 1</p></div>
+                  <p class="precio">$64.900</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel" style="margin-top: 24px;">
+              <h2 style="margin-bottom: 16px;">Datos de envío</h2>
+              <form action="#" method="post">
+                <div class="fila-campos">
+                  <div class="campo"><label for="env-nombre">Nombre completo</label><input type="text" id="env-nombre" name="nombre" required></div>
+                  <div class="campo"><label for="env-correo">Correo</label><input type="email" id="env-correo" name="correo" required></div>
+                </div>
+                <div class="campo"><label for="env-direccion">Dirección</label><input type="text" id="env-direccion" name="direccion" required></div>
+                <div class="fila-campos">
+                  <div class="campo"><label for="env-ciudad">Ciudad</label><input type="text" id="env-ciudad" name="ciudad" required></div>
+                  <div class="campo"><label for="env-telefono">Teléfono</label><input type="tel" id="env-telefono" name="telefono" required></div>
+                </div>
+
+                <h2 style="margin-top: 8px;">Medio de pago</h2>
+                <div class="campo">
+                  <label for="pago-tipo">Método</label>
+                  <select id="pago-tipo" name="pago">
+                    <option>Tarjeta de crédito o débito</option>
+                    <option>PayPal</option>
+                    <option>Pago contra entrega</option>
+                  </select>
+                </div>
+                <div class="campo"><label for="pago-titular">Nombre del titular</label><input type="text" id="pago-titular" name="titular"></div>
+                <div class="fila-campos">
+                  <div class="campo"><label for="pago-vence">Vencimiento</label><input type="text" id="pago-vence" name="vence" placeholder="MM/AA"></div>
+                  <div class="campo"><label for="pago-cvv">Código de seguridad</label><input type="password" id="pago-cvv" name="cvv" maxlength="4"></div>
+                </div>
+                <p class="ayuda">Esta es una maqueta estática: el formulario no envía ni guarda datos reales.</p>
+              </form>
+            </div>
+          </div>
+
+          <aside class="resumen" aria-labelledby="titulo-resumen">
+            <h2 id="titulo-resumen" style="margin-bottom: 12px;">Resumen</h2>
+            <dl>
+              <div><dt>Subtotal</dt><dd>$124.800</dd></div>
+              <div><dt>Descuento (15%)</dt><dd>-$18.720</dd></div>
+              <div><dt>Envío</dt><dd>$9.900</dd></div>
+              <div class="total"><dt>Total</dt><dd>$115.980</dd></div>
+            </dl>
+            <label for="cupon" style="margin-top: 12px; display: block;">Cupón</label>
+            <div style="display: flex; gap: 8px; margin: 6px 0 16px;">
+              <input type="text" id="cupon" name="cupon" placeholder="LANZAMIENTO">
+              <button class="btn btn-borde" type="button">Aplicar</button>
+            </div>
+            <a class="btn btn-bloque" href="#">Finalizar pedido</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="sitio">
+    <div class="columnas">
+      <section>
+        <h3>Cool Studio</h3>
+        <p>Camisetas con letras urbanas y minimalistas. Diseño propio, edición limitada.</p>
+      </section>
+      <section>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="editorial.html">Outfits</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Cuenta</h3>
+        <ul>
+          <li><a href="registro.html">Crear cuenta</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="recuperar.html">Recuperar contraseña</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <address>
+          <p>Teléfono: +57 300 000 0000</p>
+          <p>Correo: hola@coolstudio.example</p>
+          <p>Bogotá, Colombia</p>
+        </address>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="derechos">&copy; 2026 Cool Studio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
