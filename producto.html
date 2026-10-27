@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool Studio: tienda en línea de camisetas con letras urbanas.">
+  <title>Detalle de producto | Cool Studio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <header class="sitio">
+    <div class="barra">
+      <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="arte.html">Arte</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <a href="login.html">Ingresar</a>
+        <a class="btn btn-borde" href="carrito.html">Carrito (2)</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="seccion" aria-labelledby="titulo-producto">
+      <div class="contenedor">
+        <div class="detalle">
+          <div>
+            <img class="principal" src="img/camisa-gris.svg" alt="Camiseta ROAD gris, vista frontal" width="300" height="300">
+            <div class="miniaturas">
+              <img src="img/camisa-gris.svg" alt="Vista frontal" width="80" height="80">
+              <img src="img/camisa-negra.svg" alt="Vista en color negro" width="80" height="80">
+              <img src="img/camisa-crema.svg" alt="Vista en color crema" width="80" height="80">
+            </div>
+          </div>
+          <div>
+            <span class="etiqueta">EDICIÓN LIMITADA</span>
+            <h1 id="titulo-producto" style="margin: 10px 0;">Camiseta ROAD gris</h1>
+            <p class="estrellas" aria-label="Calificación 4.5 de 5">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color: var(--texto); letter-spacing: 0;">(4.5 · 38 opiniones)</span></p>
+            <p class="precio" style="font-size: 1.8rem; margin: 10px 0;">$59.900</p>
+            <p>Camiseta de algodón peinado con letras minimalistas. Corte oversize, cuello reforzado y hombro caído.</p>
+
+            <form action="carrito.html" method="get" style="margin-top: 20px;">
+              <fieldset style="border: none;">
+                <legend style="color: var(--texto-claro); font-weight: 700; margin-bottom: 8px;">Talla</legend>
+                <div class="selector-talla">
+                  <input type="radio" id="t-s" name="talla" value="S"><label for="t-s">S</label>
+                  <input type="radio" id="t-m" name="talla" value="M" checked><label for="t-m">M</label>
+                  <input type="radio" id="t-l" name="talla" value="L"><label for="t-l">L</label>
+                  <input type="radio" id="t-xl" name="talla" value="XL"><label for="t-xl">XL</label>
+                </div>
+              </fieldset>
+              <div class="campo">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="10">
+              </div>
+              <button class="btn btn-bloque" type="submit">Agregar al carrito</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-complementos">
+      <div class="contenedor">
+        <h2 id="titulo-complementos">Completa tu outfit</h2>
+        <div class="rejilla-3">
+          <article class="producto"><img src="img/gorro.svg" alt="Gorro negro con detalle lima" width="300" height="300" loading="lazy"><h3>Gorro</h3><p class="precio">$29.900</p></article>
+          <article class="producto"><img src="img/manilla.svg" alt="Manilla lima" width="300" height="300" loading="lazy"><h3>Manilla</h3><p class="precio">$12.900</p></article>
+          <article class="producto"><img src="img/banda.svg" alt="Banda azul para la cabeza" width="300" height="300" loading="lazy"><h3>Banda</h3><p class="precio">$14.900</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-opiniones">
+      <div class="contenedor">
+        <h2 id="titulo-opiniones">Opiniones</h2>
+        <div class="opiniones">
+          <article class="opinion"><p class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p>Muy buena calidad, la tela se siente gruesa.</p><p class="ayuda">Camila, Bogotá</p></article>
+          <article class="opinion"><p class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9734;</p><p>El diseño es justo como en las fotos.</p><p class="ayuda">Andrés, Medellín</p></article>
+          <article class="opinion"><p class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p>Llegó rápido y la talla M me quedó perfecta.</p><p class="ayuda">Laura, Cali</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="sitio">
+    <div class="columnas">
+      <section>
+        <h3>Cool Studio</h3>
+        <p>Camisetas con letras urbanas y minimalistas. Diseño propio, edición limitada.</p>
+      </section>
+      <section>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="lanzamientos.html">Lanzamientos</a></li>
+          <li><a href="editorial.html">Outfits</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Cuenta</h3>
+        <ul>
+          <li><a href="registro.html">Crear cuenta</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="recuperar.html">Recuperar contraseña</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contacto</h3>
+        <address>
+          <p>Teléfono: +57 300 000 0000</p>
+          <p>Correo: hola@coolstudio.example</p>
+          <p>Bogotá, Colombia</p>
+        </address>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="derechos">&copy; 2026 Cool Studio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
