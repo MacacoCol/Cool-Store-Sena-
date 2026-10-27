@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cool Studio: tienda en línea de camisetas con letras urbanas.">
+  <title>Crear cuenta | Cool Studio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <main class="centrado">
+    <div class="auth">
+      <form class="formulario" action="#" method="post">
+        <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+        <h1>Crear cuenta</h1>
+        <div class="fila-campos">
+          <div class="campo"><label for="nombre">Nombre</label><input type="text" id="nombre" name="nombre" required></div>
+          <div class="campo"><label for="apellido">Apellido</label><input type="text" id="apellido" name="apellido" required></div>
+        </div>
+        <div class="campo"><label for="correo">Correo</label><input type="email" id="correo" name="correo" required></div>
+        <div class="fila-campos">
+          <div class="campo"><label for="telefono">Teléfono</label><input type="tel" id="telefono" name="telefono"></div>
+          <div class="campo"><label for="ciudad">Ciudad</label><input type="text" id="ciudad" name="ciudad"></div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo"><label for="clave">Contraseña</label><input type="password" id="clave" name="clave" minlength="8" required></div>
+          <div class="campo"><label for="clave2">Confirmar contraseña</label><input type="password" id="clave2" name="clave2" minlength="8" required></div>
+        </div>
+        <div class="campo campo-check"><input type="checkbox" id="terminos" name="terminos" required><label for="terminos">Acepto los términos y condiciones</label></div>
+        <button class="btn btn-bloque" type="submit">Crear cuenta</button>
+        <p class="divisor">o continúa con</p>
+        <div class="fila-campos">
+          <button class="btn btn-borde" type="button">Google</button>
+          <button class="btn btn-borde" type="button">Apple</button>
+        </div>
+        <p class="ayuda">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+      </form>
+      <aside class="lateral">
+        <h2>Únete a la lista privada de Cool Studio</h2>
+        <p>Accede primero a ediciones limitadas y descuentos exclusivos.</p>
+        <img src="img/camisa-negra.svg" alt="Camiseta NOIR" width="300" height="300">
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
