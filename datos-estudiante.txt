@@ -1,0 +1,4 @@
+Nombre: Santiago García Castañeda
+Ficha: ESCRIBE_AQUI_TU_NUMERO_DE_FICHA
+Evidencia: Proyecto tienda en linea (Git, HTML y CSS)
+Fecha: 26 de octubre de 2026
