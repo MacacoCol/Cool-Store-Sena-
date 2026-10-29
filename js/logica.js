@@ -28,3 +28,24 @@ console.log("Tipo de disponible:", typeof camisetas[0].disponible);
 console.log("Tipo de camisetas:", typeof camisetas);
 console.log("5 == '5' ->", 5 == "5");   // true: compara solo el valor
 console.log("5 === '5' ->", 5 === "5"); // false: compara valor y tipo
+
+
+// ---------- PARTE 2: filtros y métodos de arreglos ----------
+// filter: devuelve TODAS las que cumplan la condición
+const filtrarPorColor = (color) => camisetas.filter((c) => c.color === color);
+const filtrarPorTalla = (talla) => camisetas.filter((c) => c.tallas.includes(talla));
+
+// find: devuelve solo la PRIMERA que cumpla (o undefined si no hay)
+const buscarPrimeraPorTalla = (talla) => camisetas.find((c) => c.tallas.includes(talla));
+
+// map: crea un arreglo nuevo solo con los nombres
+const nombres = camisetas.map((c) => c.nombre);
+
+// reduce: llega a un solo resultado (suma de todos los precios)
+const sumaPrecios = camisetas.reduce((suma, c) => suma + c.precio, 0);
+
+console.log("Color azul:", filtrarPorColor("azul"));
+console.log("Talla S (todas):", filtrarPorTalla("S").map((c) => c.nombre));
+console.log("Talla XL (primera):", buscarPrimeraPorTalla("XL").nombre);
+console.log("Nombres:", nombres);
+console.log("Suma de precios del catálogo:", sumaPrecios);
