@@ -49,3 +49,63 @@ console.log("Talla S (todas):", filtrarPorTalla("S").map((c) => c.nombre));
 console.log("Talla XL (primera):", buscarPrimeraPorTalla("XL").nombre);
 console.log("Nombres:", nombres);
 console.log("Suma de precios del catálogo:", sumaPrecios);
+
+
+// ---------- PARTE 3: funciones, carrito, condicionales y ciclos ----------
+// Función clásica
+function calcularTotal(precio, cantidad) {
+    return precio * cantidad;
+}
+
+// Función flecha (una sola línea: no lleva return)
+const conIVA = (valor) => Math.round(valor * (1 + IVA));
+
+// Agregar al carrito: if / else if / else con push
+function agregarAlCarrito(camiseta, talla, cantidad = 1) {
+    if (!camiseta.disponible) {
+        alert("Producto agotado: " + camiseta.nombre);
+    } else if (!camiseta.tallas.includes(talla)) {
+        console.log("La talla " + talla + " no está disponible para " + camiseta.nombre);
+    } else {
+        carrito.push({
+            id: camiseta.id,
+            nombre: camiseta.nombre,
+            talla: talla,
+            cantidad: cantidad,
+            precio: camiseta.precio
+        });
+        // Se recalcula el total sumando precio x cantidad de cada ítem
+        totalCarrito = carrito.reduce(
+            (suma, item) => suma + calcularTotal(item.precio, item.cantidad),
+            0
+        );
+        console.log("Agregada: " + camiseta.nombre + " (talla " + talla + ") x" + cantidad);
+    }
+}
+
+// Pruebas
+agregarAlCarrito(camisetas[0], "M", 2); // ok
+agregarAlCarrito(camisetas[1], "L");    // ok
+agregarAlCarrito(camisetas[2], "S");    // talla no disponible
+agregarAlCarrito(camisetas[3], "M");    // agotada -> sale un alert al recargar (comenta esta línea si te molesta)
+
+console.log("Carrito:", carrito);
+console.log("Ítems en el carrito:", carrito.length);
+console.log("Subtotal:", totalCarrito);
+console.log("Total con IVA:", conIVA(totalCarrito));
+
+// Operadores lógicos: && (y), || (o), ! (no)
+const hayEnvioGratis = totalCarrito >= 150000 && carrito.length > 0;
+console.log("¿Envío gratis?", hayEnvioGratis);
+
+// Ciclo for clásico (por índice)
+console.log("--- Catálogo (for clásico) ---");
+for (let i = 0; i < camisetas.length; i++) {
+    console.log(i + ". " + camisetas[i].nombre + " - $" + camisetas[i].precio);
+}
+
+// Ciclo for...of (moderno, recorre cada elemento)
+console.log("--- Disponibilidad (for...of) ---");
+for (const camiseta of camisetas) {
+    console.log(camiseta.nombre + ": " + (camiseta.disponible ? "disponible" : "agotada"));
+}
