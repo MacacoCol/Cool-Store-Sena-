@@ -112,3 +112,21 @@ if (formFiltros) {
     });
     aplicarFiltros(); // muestra "Mostrando 6 de 6" al cargar
 }
+
+
+// ---------- PARTE C: agregar al carrito ----------
+if (rejilla) {
+    rejilla.addEventListener("click", (e) => {
+        const botonAgregar = e.target.closest(".btn-agregar");
+        if (!botonAgregar) {
+            return;
+        }
+        const tarjeta = botonAgregar.closest(".producto");
+        const tallaMarcada = tarjeta.querySelector('.talla[aria-pressed="true"]');
+        const talla = tallaMarcada ? tallaMarcada.dataset.talla : "";
+
+        const resultado = agregarAlCarrito(Number(tarjeta.dataset.id), talla);
+        mostrarAviso(resultado.mensaje, !resultado.ok);
+        actualizarContador();
+    });
+}
