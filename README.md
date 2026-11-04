@@ -63,3 +63,19 @@ git log --oneline
 ## Entrega
 
 Comprime la carpeta `tienda-online` **incluyendo la carpeta oculta `.git`** y agrega un archivo con tu nombre y número de ficha.
+
+## Sesión 3: DOM, eventos y carrito
+
+Se pasó de páginas estáticas a páginas interactivas con JavaScript.
+
+- `js/logica.js`: datos de las camisetas, cálculo de subtotal, IVA, envío y total, y el estado del carrito (se guarda en `localStorage`).
+- `js/tienda.js`: manipula el DOM con `querySelector`, `querySelectorAll`, `classList`, `dataset` y `addEventListener`.
+
+Qué hace cada pantalla:
+
+- **Catálogo:** tarjetas creadas desde el arreglo, filtros por talla y color con botón de limpiar, y contador de resultados.
+- **Agregar al carrito:** exige elegir una talla, avisa si la camiseta está agotada y actualiza el contador del encabezado.
+- **Carrito:** lista con suma, resta y quitar, y total en pesos colombianos (nunca queda en negativo).
+- **Login:** validación con el evento `submit` (correo con `@`, contraseña de mínimo 8 caracteres).
+
+Los commits siguen el formato `tipo: verbo en infinitivo` (`feat`, `fix`, `style`, `refactor`, `docs`).
