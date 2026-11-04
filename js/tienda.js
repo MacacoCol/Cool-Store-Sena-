@@ -130,3 +130,40 @@ if (rejilla) {
         actualizarContador();
     });
 }
+
+
+// ---------- PARTE E: validar el login con el evento submit ----------
+const formLogin = document.querySelector("#form-login");
+
+if (formLogin) {
+    const campoCorreo = formLogin.querySelector("#usuario");
+    const campoClave = formLogin.querySelector("#clave");
+    const mensajeLogin = formLogin.querySelector("#mensaje-login");
+
+    // Muestra el mensaje, marca si es de éxito o de error y deja el cursor en el campo con problema
+    function mostrarMensajeLogin(texto, valido, campo) {
+        mensajeLogin.textContent = texto;
+        mensajeLogin.classList.toggle("mensaje-ok", valido);
+        if (campo) {
+            campo.focus();
+        }
+    }
+
+    formLogin.addEventListener("submit", (e) => {
+        e.preventDefault(); // no se envía hasta revisar los datos
+        const correo = campoCorreo.value.trim(); // trim() quita espacios sobrantes
+        const clave = campoClave.value;
+
+        if (correo === "") {
+            mostrarMensajeLogin("Escribe tu correo.", false, campoCorreo);
+        } else if (!correo.includes("@")) {
+            mostrarMensajeLogin("Escribe un correo válido: debe incluir @.", false, campoCorreo);
+        } else if (clave === "") {
+            mostrarMensajeLogin("Escribe tu contraseña.", false, campoClave);
+        } else if (clave.length < 8) {
+            mostrarMensajeLogin("La contraseña debe tener mínimo 8 caracteres.", false, campoClave);
+        } else {
+            mostrarMensajeLogin("Datos listos para el envío.", true);
+        }
+    });
+}

@@ -11,18 +11,21 @@
   <link rel="stylesheet" href="css/paginas.css">
 </head>
 <body>
-  <main class="centrado">
-    <div class="auth simple">
-      <form class="formulario" action="#" method="post">
-        <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
-        <h1>Iniciar sesión</h1>
-        <div class="campo"><label for="usuario">Correo o usuario</label><input type="text" id="usuario" name="usuario" required></div>
-        <div class="campo"><label for="clave">Contraseña</label><input type="password" id="clave" name="clave" required></div>
-        <button class="btn btn-bloque" type="submit">Iniciar sesión</button>
-        <p class="ayuda"><a href="recuperar.html">Recuperar contraseña</a></p>
-        <p class="ayuda">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
-      </form>
-    </div>
-  </main>
+<main class="centrado">
+  <div class="auth simple">
+    <form class="formulario" id="form-login" action="#" method="post" novalidate>
+      <a class="logo" href="index.html">COOL <span>STUDIO</span></a>
+      <h1>Iniciar sesión</h1>
+      <div class="campo"><label for="usuario">Correo electrónico</label><input type="text" id="usuario" name="usuario" autocomplete="username"></div>
+      <div class="campo"><label for="clave">Contraseña</label><input type="password" id="clave" name="clave" autocomplete="current-password"></div>
+      <p class="mensaje" id="mensaje-login" role="alert"></p>
+      <button class="btn btn-bloque" type="submit">Iniciar sesión</button>
+      <p class="ayuda"><a href="recuperar.html">Recuperar contraseña</a></p>
+      <p class="ayuda">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    </form>
+  </div>
+</main>
+<script src="js/logica.js"></script>
+<script src="js/tienda.js"></script>
 </body>
 </html>
