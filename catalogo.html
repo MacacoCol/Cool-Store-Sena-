@@ -35,15 +35,10 @@
     <section class="seccion" aria-labelledby="titulo-catalogo">
       <div class="contenedor">
         <h1 id="titulo-catalogo">Catálogo</h1>
-        <p>Filtra por material, talla y color.</p>
+        <p>Filtra por talla y color.</p>
         <div class="con-filtros" style="margin-top: 24px;">
           <aside class="filtros" aria-label="Filtros">
-            <form action="#" method="get">
-              <fieldset>
-                <legend>Material</legend>
-                <div class="campo campo-check"><input type="checkbox" id="mat-algodon" name="material" value="algodon"><label for="mat-algodon">Algodón peinado</label></div>
-                <div class="campo campo-check"><input type="checkbox" id="mat-organico" name="material" value="organico"><label for="mat-organico">Algodón orgánico</label></div>
-              </fieldset>
+            <form id="filtros" action="#" method="get">
               <fieldset>
                 <legend>Talla</legend>
                 <div class="campo campo-check"><input type="checkbox" id="talla-s" name="talla" value="S"><label for="talla-s">S</label></div>
@@ -64,57 +59,12 @@
                 </select>
               </div>
               <button class="btn btn-bloque" type="submit">Aplicar filtros</button>
+              <button class="btn btn-borde btn-bloque" type="button" id="btn-limpiar">Limpiar filtros</button>
             </form>
           </aside>
-          <div class="catalogo" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
-      <article class="producto">
-        <img src="img/camisa-gris.svg" alt="Camiseta ROAD gris" width="300" height="300" loading="lazy">
-        <h3><a href="producto.html">Camiseta ROAD gris</a></h3>
-        <p class="descripcion">Algodón peinado, letras negras minimalistas.</p>
-        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
-        <p class="precio">$59.900</p>
-        <a class="btn" href="producto.html">Comprar</a>
-      </article>
-      <article class="producto">
-        <img src="img/camisa-negra.svg" alt="Camiseta NOIR" width="300" height="300" loading="lazy">
-        <h3><a href="producto.html">Camiseta NOIR</a></h3>
-        <p class="descripcion">Negra con letras lima, corte oversize.</p>
-        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
-        <p class="precio">$64.900</p>
-        <a class="btn" href="producto.html">Comprar</a>
-      </article>
-      <article class="producto">
-        <img src="img/camisa-lima.svg" alt="Camiseta LIMA" width="300" height="300" loading="lazy">
-        <h3><a href="producto.html">Camiseta LIMA</a></h3>
-        <p class="descripcion">Color lima brillante, estampado tipográfico.</p>
-        <ul class="tallas" aria-label="Tallas disponibles"><li>M</li><li>L</li><li>XL</li></ul>
-        <p class="precio">$62.900</p>
-        <a class="btn" href="producto.html">Comprar</a>
-      </article>
-      <article class="producto">
-        <img src="img/camisa-crema.svg" alt="Camiseta VINTAGE" width="300" height="300" loading="lazy">
-        <h3><a href="producto.html">Camiseta VINTAGE</a></h3>
-        <p class="descripcion">Tono crema con letras urbanas estilo vintage.</p>
-        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li></ul>
-        <p class="precio">$67.900</p>
-        <a class="btn" href="producto.html">Comprar</a>
-      </article>
-      <article class="producto">
-        <img src="img/camisa-azul.svg" alt="Camiseta STREET" width="300" height="300" loading="lazy">
-        <h3><a href="producto.html">Camiseta STREET</a></h3>
-        <p class="descripcion">Azul profundo, letras blancas de gran formato.</p>
-        <ul class="tallas" aria-label="Tallas disponibles"><li>S</li><li>M</li><li>L</li><li>XL</li></ul>
-        <p class="precio">$64.900</p>
-        <a class="btn" href="producto.html">Comprar</a>
-      </article>
-      <article class="producto">
-        <img src="img/camisa-blanca.svg" alt="Camiseta BLOCK" width="300" height="300" loading="lazy">
-        <h3><a href="producto.html">Camiseta BLOCK</a></h3>
-        <p class="descripcion">Blanca con letras rojas en bloque.</p>
-        <ul class="tallas" aria-label="Tallas disponibles"><li>M</li><li>L</li><li>XL</li></ul>
-        <p class="precio">$59.900</p>
-        <a class="btn" href="producto.html">Comprar</a>
-      </article>
+          <div>
+            <p class="resultados" id="resultados" aria-live="polite"></p>
+            <div class="catalogo" id="catalogo" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));"></div>
           </div>
         </div>
       </div>
@@ -158,5 +108,7 @@
     </div>
     <p class="derechos">&copy; 2026 Cool Studio. Todos los derechos reservados.</p>
   </footer>
+  <script src="js/logica.js"></script>
+  <script src="js/tienda.js"></script>
 </body>
 </html>
