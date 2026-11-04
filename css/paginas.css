@@ -403,4 +403,137 @@
   footer.sitio .columnas {
     grid-template-columns: 1fr;
   }
+
+  /* ==========================================================
+     Sesión 3: DOM, filtros, carrito y validaciones
+     ========================================================== */
+
+  /* Lo que JavaScript oculta con classList.toggle("oculto") */
+  .oculto {
+    display: none !important;
+  }
+
+  /* Tarjetas del catálogo */
+  .producto.agotado img {
+    opacity: 0.45;
+  }
+
+  .etiqueta-agotado {
+    background: var(--error);
+  }
+
+  .btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn[disabled]:hover {
+    background: var(--lima);
+  }
+
+  .resultados {
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Botones de talla dentro de cada tarjeta */
+  .talla {
+    font: inherit;
+    font-size: 0.85rem;
+    background: transparent;
+    color: var(--texto);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 2px 12px;
+    cursor: pointer;
+  }
+
+  .talla:hover {
+    border-color: var(--lima);
+  }
+
+  .talla[aria-pressed="true"] {
+    background: var(--lima);
+    border-color: var(--lima);
+    color: var(--texto-oscuro);
+    font-weight: 700;
+  }
+
+  /* Aviso flotante creado con JavaScript */
+  #aviso {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    background: var(--superficie-clara);
+    color: var(--texto-oscuro);
+    padding: 10px 20px;
+    border-radius: var(--radio);
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 20;
+  }
+
+  #aviso.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  #aviso.aviso-error {
+    background: var(--error);
+  }
+
+  /* Filas del carrito */
+  .cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cantidad button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    color: var(--texto-claro);
+    background: var(--fondo);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .cantidad button:hover {
+    border-color: var(--lima);
+  }
+
+  .btn-quitar {
+    font: inherit;
+    color: var(--error);
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .carrito-vacio {
+    padding: 16px 0;
+  }
+
+  /* Mensajes de validación del formulario */
+  .mensaje {
+    min-height: 1.4em;
+    font-size: 0.9rem;
+    color: var(--error);
+  }
+
+  .mensaje.mensaje-ok {
+    color: var(--lima);
+  }
+
+  @media (max-width: 640px) {
+    .item-carrito {
+      flex-wrap: wrap;
+    }
+  }
 }
