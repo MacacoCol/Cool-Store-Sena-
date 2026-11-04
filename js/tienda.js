@@ -54,3 +54,61 @@ function crearTarjeta(camiseta) {
 if (rejilla) {
     rejilla.innerHTML = camisetas.map(crearTarjeta).join("");
 }
+
+
+// ---------- PARTE B: tallas y filtros ----------
+// Marcar una talla dentro de una tarjeta.
+// Un solo listener en el contenedor sirve para todas las tarjetas (e.target dice dónde se hizo clic)
+if (rejilla) {
+    rejilla.addEventListener("click", (e) => {
+        const botonTalla = e.target.closest(".talla");
+        if (!botonTalla) {
+            return; // el clic fue en otra parte de la tarjeta
+        }
+        const estabaMarcada = botonTalla.getAttribute("aria-pressed") === "true";
+        const tarjeta = botonTalla.closest(".producto");
+        tarjeta.querySelectorAll(".talla").forEach((b) => b.setAttribute("aria-pressed", "false"));
+        botonTalla.setAttribute("aria-pressed", estabaMarcada ? "false" : "true"); // volver a pulsarla la desmarca
+    });
+}
+
+// Filtros por talla y color: ocultan las tarjetas que no coinciden
+const formFiltros = document.querySelector("#filtros");
+const textoResultados = document.querySelector("#resultados");
+
+function aplicarFiltros() {
+    const tallasElegidas = [...formFiltros.querySelectorAll('input[name="talla"]:checked')].map((i) => i.value);
+    const colorElegido = formFiltros.querySelector("#color").value;
+    const tarjetas = document.querySelectorAll(".producto");
+    let visibles = 0;
+
+    tarjetas.forEach((tarjeta) => {
+        const tallasTarjeta = tarjeta.dataset.talla.split(" ");
+        const cumpleTalla = tallasElegidas.length === 0 || tallasElegidas.some((t) => tallasTarjeta.includes(t));
+        const cumpleColor = colorElegido === "" || tarjeta.dataset.color === colorElegido;
+        const mostrar = cumpleTalla && cumpleColor;
+
+        tarjeta.classList.toggle("oculto", !mostrar); // la clase "oculto" viene del CSS
+        if (mostrar) {
+            visibles++;
+        }
+    });
+
+    textoResultados.textContent =
+        visibles === 0
+            ? "No hay camisetas con esos filtros."
+            : "Mostrando " + visibles + " de " + tarjetas.length + " camisetas";
+}
+
+if (formFiltros) {
+    formFiltros.addEventListener("submit", (e) => {
+        e.preventDefault(); // evita que la página se recargue
+        aplicarFiltros();
+    });
+    formFiltros.addEventListener("change", aplicarFiltros); // se filtra apenas marcas algo
+    document.querySelector("#btn-limpiar").addEventListener("click", () => {
+        formFiltros.reset();
+        aplicarFiltros();
+    });
+    aplicarFiltros(); // muestra "Mostrando 6 de 6" al cargar
+}
