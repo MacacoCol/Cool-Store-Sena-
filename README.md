@@ -79,3 +79,16 @@ Qué hace cada pantalla:
 - **Login:** validación con el evento `submit` (correo con `@`, contraseña de mínimo 8 caracteres).
 
 Los commits siguen el formato `tipo: verbo en infinitivo` (`feat`, `fix`, `style`, `refactor`, `docs`).
+
+## Sesión 4: base de datos
+
+Modelo relacional de la tienda en MySQL 8, creado y probado con MySQL Workbench.
+
+- `bd/cool.sql`: script con la estructura (DDL), los datos de prueba (DML), consultas con `JOIN`, actualizaciones, borrado con condición y una transacción.
+- `bd/modelo-er.png`: diagrama entidad-relación.
+
+Tablas (8): `categorias`, `productos`, `variantes`, `usuarios`, `direcciones`, `pedidos`, `detalle_pedido` y `pagos`.
+
+Cómo usarlo: abrir `bd/cool.sql` en Workbench y ejecutarlo completo. Crea la base `cool` desde cero.
+
+Las ramas siguen el formato `feature/nombre`: este trabajo se hizo en `feature/modelo-db` y se integró con `merge`.
