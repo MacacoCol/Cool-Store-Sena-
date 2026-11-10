@@ -64,3 +64,52 @@ CREATE TABLE direcciones (
                                  FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
                                      ON UPDATE CASCADE ON DELETE RESTRICT
 );
+
+-- ==========================================================
+-- PARTE 2. DDL: pedidos, detalle (tabla intermedia) y pagos
+-- ==========================================================
+
+CREATE TABLE pedidos (
+                         id_pedido    INT AUTO_INCREMENT PRIMARY KEY,
+                         id_usuario   INT NOT NULL,
+                         id_direccion INT NOT NULL,
+                         fecha        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                         estado       VARCHAR(15) NOT NULL DEFAULT 'pendiente'
+                             CHECK (estado IN ('pendiente', 'pagado', 'entregado', 'cancelado')),
+                         costo_envio  DECIMAL(10,0) NOT NULL DEFAULT 0,
+                         CONSTRAINT fk_pedidos_usuario
+                             FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+                                 ON UPDATE CASCADE ON DELETE RESTRICT,
+                         CONSTRAINT fk_pedidos_direccion
+                             FOREIGN KEY (id_direccion) REFERENCES direcciones (id_direccion)
+                                 ON UPDATE CASCADE ON DELETE RESTRICT
+) AUTO_INCREMENT = 101;
+
+-- Relación de muchos a muchos entre pedidos y variantes.
+-- Llave primaria compuesta: cada variante aparece una sola vez por pedido
+CREATE TABLE detalle_pedido (
+                                id_pedido       INT NOT NULL,
+                                id_variante     INT NOT NULL,
+                                cantidad        INT NOT NULL CHECK (cantidad > 0),
+                                precio_unitario DECIMAL(10,0) NOT NULL,   -- precio al momento de la compra
+                                PRIMARY KEY (id_pedido, id_variante),
+                                CONSTRAINT fk_detalle_pedido
+                                    FOREIGN KEY (id_pedido) REFERENCES pedidos (id_pedido)
+                                        ON UPDATE CASCADE ON DELETE CASCADE,
+                                CONSTRAINT fk_detalle_variante
+                                    FOREIGN KEY (id_variante) REFERENCES variantes (id_variante)
+                                        ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE pagos (
+                       id_pago    INT AUTO_INCREMENT PRIMARY KEY,
+                       id_pedido  INT NOT NULL,
+                       metodo     VARCHAR(30) NOT NULL,
+                       monto      DECIMAL(10,0) NOT NULL CHECK (monto > 0),
+                       estado     VARCHAR(15) NOT NULL DEFAULT 'pendiente'
+                           CHECK (estado IN ('pendiente', 'aprobado', 'rechazado')),
+                       fecha_pago DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                       CONSTRAINT fk_pagos_pedido
+                           FOREIGN KEY (id_pedido) REFERENCES pedidos (id_pedido)
+                               ON UPDATE CASCADE ON DELETE RESTRICT
+);
